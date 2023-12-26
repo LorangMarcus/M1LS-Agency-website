@@ -1,0 +1,206 @@
+:root {
+  --border-color: currentColor;
+  --tw-text-opacity: 1;
+  --tw-bg-opacity: 1;
+  --white: #fff;
+}
+
+
+@font-face {
+  font-family: Monument Grotesk;
+  src: url(./ABCMonumentGrotesk-Regular-Trial.otf)
+}
+
+@font-face {
+  font-family: Monument Grotesk i;
+  src: url(./ABCMonumentGrotesk-RegularItalic-Trial.otf);
+}
+
+
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  overflow: hidden;
+  background-color: rgba(244, 240, 240, var(--tw-bg-opacity));
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';;
+}
+
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+} 
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+.foggy-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  background-color: rgba(29, 27, 27, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: inset(2rem 2rem 2rem 2rem round 1.2rem);
+  background: radial-gradient(110.82% 109.9% at 50% 0%,transparent 37.41%, #070707 69.27%,#a42c12 100%);
+  background-color: #000000;
+  border: solid 1px var(--border-color);
+  animation: colorChange 5s infinite alternate, scaleEffect 0.9s forwards;
+  transition: scale 0.5s ease-out;
+}
+
+@keyframes colorChange {
+  from {
+    background-position:left top;
+    background-size:200% 100%;
+  }
+  49.9% {
+    background-position:left top; 
+  }
+  50% {
+    background-size:100% 100%;
+  }
+  50.1% {
+    background-position:right top; 
+  }
+  to {
+    background-position:right top;
+    background-size:200% 100%;
+  }
+ }
+
+ .gradient-w-full-relative-text {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+
+ .main-white-text-heading {
+  font-weight: 600;
+  color: rgba(244, 240, 240, var(--tw-bg-opacity));
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Monument Grotesk;
+  line-height: 0.75;
+  font-size: clamp(4rem, 10vw, 12rem );
+ }
+ 
+
+ .text-effect, 
+ .letter {
+  display: inline-block;
+  line-height: 0.5em;
+ }
+
+ .italic {
+  padding-right: 1.5rem;
+  font-family: Monument Grotesk i;
+ }
+
+ @media screen and (max-width:1300px) {
+  .italic {
+    padding-right: 1rem;
+   }
+}
+
+
+ .bottom-container {
+  display: flex;
+  position: absolute;
+  bottom: 57px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 100%;
+  height: 14%;
+ }
+
+ .last-updated {
+  width: 12em;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+ }
+
+ .time-weather-timezone {
+  width: 12em;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+ }
+
+
+
+  .navigation-container {
+    clip-path: inset(0 0 0 0 round 12px);
+    background-color: rgba(29, 27, 27, 0.4);
+    width: 12em;
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+
+  }
+
+  .navigation-container span, a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+
+.last-updated span,  
+.time-weather-timezone span {
+    color: rgba(244, 240, 240, var(--tw-text-opacity));
+    font-size: 15px;
+}
+
+.span-NYC{
+  margin-right: 1.5rem;
+}
+
+.span-2°C {
+  margin-right: 1.5rem;
+}
+
+
+@media screen and (max-width:1090px) {
+  .last-updated, 
+  .time-weather-timezone{
+    display: none;
+  }
+}
+
+.menu-line {
+  background-color: rgba(244, 240, 240, var(--tw-bg-opacity));
+  border-radius: 9999px;
+  height: 3px;
+  transform: translate(-128px) scale(0.0994, 1);
+  transition: transform 280ms ease-in-out;
+}
+

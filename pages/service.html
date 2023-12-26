@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./service.css">
+        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="../script.js" async defer></script>
+    </head>
+    <body>
+        <main>
+            <div class="foggy-overlay"></div>
+            <div class="container" id="container">
+                <div class="service-service-heading">
+                    <div class="service-heading">
+                        <span class="text-effect"><span>s</span>ervices we</span><br>
+                        <span class="text-effect-2"><span>p</span>rovide</span>
+                    </div>
+
+
+                    <div class="service-text">
+                        <span>Are you tired of boring, ugly WordPress templates? So are we. We forge the grid for modern websites and help revolutionize your brand without sacrificing SEO, caching, lazy loading, or any other prime website feature.</span>
+                    </div>
+                </div>
+
+                <div class="flex-box-secion">
+                    <div class="flexbox-img">
+                        <div class="image-wrapper">
+                            
+                        </div>
+                    </div>
+
+    
+                        <div class="what-we-offer-section">
+                                <span>&#10003; <span class="google-span">Google SEO</span></span>
+    
+                                <span>&#10003; <span class="quick-span">Quick</span></span>
+    
+                                <span>&#10003; <span class="flexible-span">Flexible</span></span>
+                        </div>
+
+
+                    <div class="flex-box-text">
+
+                        <div class="text-wrapper">
+                            <span>We specialize in crafting supercharged websites through the seamless integration of WordPress and creative expertise. WordPress stands out as one of the most efficient and user-friendly platforms, making it a top choice for building stable and visually captivating websites rapidly.
+                                WordPress offers a robust foundation that caters to the diverse needs of website creators. Its intuitive interface streamlines the web development process, allowing both novices and experienced developers to bring their visions to life effortlessly. The platform's reliability ensures a stable online presence, critical for businesses and individuals alike.</span>
+                        </div>
+
+                    </div>
+                </div>   
+
+
+                <div class="divider-container">
+                    <div class="divider"></div>
+                </div>
+
+                <div class="flex-box-secion">
+
+                    <div class="flex-box-text">
+
+                        <div class="text-wrapper">
+                            <span>More specifically, we create custom WordPress themes because they offer more flexibility and control over the design compared to a regular pre-made WordPress theme. A custom theme can be a powerful tool for achieving a unique and tailored website design. 
+                                However, it's important to carefully consider your needs and budget.</span>
+                        </div>
+
+                    </div>
+                </div>      
+            </div>
+
+
+
+            <div class="bottom-container">
+                <div class="last-updated">
+                
+                </div>
+
+                <div class="navigation-container">
+                    <div class="navigation">
+                        <div class="navigation-items">
+                            <nav>
+                                <a href="../index.html" id="home"> <span>Home</span></a>
+                                <a href="./work.html" id="work"> <span>Work</span></a>
+                                <a href="./service.html" id="service"> <span>Service</span></a>
+                                <a href="./about.html" id="about"> <span>About</span></a>
+                             </nav>
+                         <div class="menu-line"></div>
+                        
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="time-weather-timezone">
+
+                </div>
+            </div>
+        </main>
+        <script>
+window.addEventListener('scroll', () => {
+ let scrollPosition = window.pageYOffset;
+ let bodyHeight = document.body.offsetHeight - window.innerHeight;
+ let scrollPercentage = scrollPosition / bodyHeight;
+
+ gsap.to(document.body, {
+   duration: 1,
+   backgroundColor: `rgb(${Math.floor((1 - scrollPercentage) * 255)}, ${Math.floor((1 - scrollPercentage) * 255)}, ${Math.floor((1 - scrollPercentage) * 255)})`
+ });
+
+ gsap.to(".text-wrapper, .google-span, .quick-span, .flexible-span, .what-we-offer-section", {
+  duration: 1,
+  color: `rgb(${Math.floor(scrollPercentage * 255)}, ${Math.floor(scrollPercentage * 255)}, ${Math.floor(scrollPercentage * 255)})`
+ });
+});
+        </script>
+    </body>
+</html
